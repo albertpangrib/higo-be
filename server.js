@@ -15,7 +15,9 @@ const Count = require('./server/routes/CountRoute')
 const PORT = process.env.PORT || 8080;
 const API_PATH = process.env.API_PATH || '';
 const BASE_PATH = API_PATH ? `/${API_PATH}`: '';
-const BASE_URL = `localhost:${PORT}${BASE_PATH}`;
+const BASE_URL = process.env.NODE_ENV === 'PRODUCTION'
+    ? `${URL_PRODUCTION}`
+    :`localhost:${PORT}${BASE_PATH}`;
 
 const server = App.listen(PORT, async () => {
     try {
