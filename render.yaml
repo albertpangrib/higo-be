@@ -1,0 +1,23 @@
+services:
+  - type: web
+    runtime: node
+    name: higo-be
+    repo: https://github.com/albertpangrib/higo-be
+    region: oregon
+    plan: free
+    buildCommand: "npm install && npm production"
+    startCommand: "npm start"
+    autoDeploy: true
+    branch: main
+    envVars:
+      - key: BASE_URL
+        value: https://my-web-server.onrender.com
+      - key: PORT
+        value: 8000
+      - key: MONGODB_DB_NAME
+        value: higo-db
+      - key: MONGODB_URL_PRODUCTION
+        value: mongodb+srv://albertlukastalupanpangaribuan:MongoDbHigo@higo-db.k8mff.mongodb.net/?retryWrites=true&w=majority&appName=higo-db
+
+    cors:
+      allowedOrigins: "*"
