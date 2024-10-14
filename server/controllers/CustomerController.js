@@ -33,6 +33,7 @@ const getCustomerList = async (req, res) => {
               ...work_experience && { work_experience: work_experience },
               ...family_size && { family_size: family_size },
             })
+            .sort({cust_id: 1})
             .skip(PaginationHelper(page, page_size))
             .limit(page_size),
           ]);

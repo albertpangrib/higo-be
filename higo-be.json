@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "28761cd9-c349-47aa-81bf-43b8b036ab8f",
+		"name": "higo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25451521"
+	},
+	"item": [
+		{
+			"name": "Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://higo-be.vercel.app/api/customer?page=1&page_size=20",
+					"protocol": "https",
+					"host": [
+						"higo-be",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"customer"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Distribution",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "path",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
