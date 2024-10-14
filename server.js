@@ -13,12 +13,9 @@ const AgeDistribution = require('./server/routes/AgeDistributionRoute')
 const Count = require('./server/routes/CountRoute')
 
 const PORT = process.env.PORT || 8080;
-const URL_PRODUCTION = process.env.URL_PRODUCTION;
 const API_PATH = process.env.API_PATH || '';
 const BASE_PATH = API_PATH ? `/${API_PATH}`: '';
-const BASE_URL = process.env.NODE_ENV === 'PRODUCTION'
-    ? `${URL_PRODUCTION}${BASE_PATH}`
-    :`localhost:${PORT}${BASE_PATH}`;
+const BASE_URL = `localhost:${PORT}${BASE_PATH}`;
 
 const server = App.listen(PORT, async () => {
     try {
